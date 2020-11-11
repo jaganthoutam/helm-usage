@@ -1,0 +1,53 @@
+certmanager:
+  install: false
+gitlab-runner:
+  runners:
+    privileged: true
+global:
+  appConfig:
+    artifacts:
+      bucket: gitlab-artifacts-storage-sandbox
+    dependencyProxy:
+      bucket: gitlab-dependencyproxy-storage-sandbox
+    externalDiffs:
+      bucket: gitlab-externaldiffs-storage-sandbox
+    lfs:
+      bucket: gitlab-lfs-storage-sandbox
+    packages:
+      bucket: gitlab-packages-storage-sandbox
+    terraformState:
+      bucket: gitlab-terraform-state-sandbox
+    uploads:
+      bucket: gitlab-uploads-storage-sandbox
+  hosts:
+    domain: gitlab.bankfab.com
+  ingress:
+    configureCertmanager: false
+  psql:
+    database: postgres
+    host: database-1.xxxxxxxxxx.rds.amazonaws.com
+    password:
+      key: postgresql-password
+      secret: gitlab-postgresql-password
+    port: 5432
+    username: postgres
+  redis:
+    host: rxxxxxxxxxcache.amazonaws.com
+    password:
+      enabled: false
+    port: 6379
+nginx-ingress:
+  controller:
+    service:
+      annotations:
+        service.beta.kubernetes.io/aws-load-balancer-internal: true
+postgresql:
+  install: false
+redis:
+  install: false
+
+gitlab:
+    gitlab-shell:
+        image:
+            repository: xxxxxxxxxx.dkr..amazonaws.com/gitlab-shell
+            tag: v13.11.0
