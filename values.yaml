@@ -20,7 +20,7 @@ global:
     uploads:
       bucket: gitlab-uploads-storage-platform-tools-dev
   hosts:
-    domain: gitlab.bankfab.com
+    domain: gitlab.xxxxxxxxxx.com
   ingress:
     configureCertmanager: false
   psql:
