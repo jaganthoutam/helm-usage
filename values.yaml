@@ -6,7 +6,7 @@ gitlab-runner:
 global:
   appConfig:
     artifacts:
-      bucket: gitlab-artifacts-platform-tools-dev
+      bucket: gitlab-artifacts-storage-platform-tools-dev
     dependencyProxy:
       bucket: gitlab-dependencyproxy-storage-platform-tools-dev
     externalDiffs:
