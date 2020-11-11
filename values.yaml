@@ -6,19 +6,19 @@ gitlab-runner:
 global:
   appConfig:
     artifacts:
-      bucket: gitlab-artifacts-storage-sandbox
+      bucket: gitlab-artifacts-platform-tools-dev
     dependencyProxy:
-      bucket: gitlab-dependencyproxy-storage-sandbox
+      bucket: gitlab-dependencyproxy-storage-platform-tools-dev
     externalDiffs:
-      bucket: gitlab-externaldiffs-storage-sandbox
+      bucket: gitlab-externaldiffs-storage-platform-tools-dev
     lfs:
-      bucket: gitlab-lfs-storage-sandbox
+      bucket: gitlab-lfs-storage-platform-tools-dev
     packages:
-      bucket: gitlab-packages-storage-sandbox
+      bucket: gitlab-packages-storage-platform-tools-dev
     terraformState:
-      bucket: gitlab-terraform-state-sandbox
+      bucket: gitlab-terraform-state-platform-tools-dev
     uploads:
-      bucket: gitlab-uploads-storage-sandbox
+      bucket: gitlab-uploads-storage-platform-tools-dev
   hosts:
     domain: gitlab.bankfab.com
   ingress:
